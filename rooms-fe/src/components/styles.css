@@ -1,0 +1,59 @@
+.buildings, .rooms {
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.buildingItem {
+  cursor: pointer;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+.buildingItem.selected {
+    background: #EEE
+}
+.bHeader {
+  font-size: 20px;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.buildings-group {
+    overflow: auto
+}
+.addBuildingFrm, .addRoomFrm {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.rooms {
+  width: 300px;
+  max-width: 30%;
+  border:1px solid #DDD;
+  border-top: none;
+  border-bottom: none; 
+  position: relative;
+}
+.editor {
+  flex-grow: 1;
+  padding: 20px;
+  overflow: auto;
+  position: relative;
+}
+
+.faded {
+    font-style: italic;
+    color: #999
+}
+
+.empty {
+  position: absolute;
+  top: 66px;
+  left: 10px;
+  font-size: 20px;
+  color: #AAA;
+}
