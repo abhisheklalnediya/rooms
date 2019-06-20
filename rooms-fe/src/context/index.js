@@ -91,11 +91,11 @@ class RoomProvider extends React.Component {
 
   updateBuildingState(b) {
     const {
-      name, address, landmarks, id,
+      name, address, landmarks, id, selected,
     } = b;
     const [landmark1, landmark2, landmark3] = landmarks;
     const data = {
-      name, address, landmark1, landmark2, landmark3, id,
+      name, address, landmark1, landmark2, landmark3, id, selected,
     };
     this.setState(state => ({ buildings: _.sortBy([...state.buildings.map(x => (x.id === data.id ? data : x))], 'id') }));
   }
