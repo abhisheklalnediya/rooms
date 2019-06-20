@@ -6,8 +6,6 @@ import {
   Form as AForm, Input, Button, Radio,
 } from 'antd';
 
-const required = value => (value ? undefined : 'Required');
-
 const RoomEditorForm = ({ initialValues, onSubmit, onDelete }) => (
   <Form
     initialValues={initialValues}
@@ -26,7 +24,7 @@ const RoomEditorForm = ({ initialValues, onSubmit, onDelete }) => (
               help={(meta.submitError && meta.submitError.length && meta.submitError.join(',')) || (meta.error && meta.touched && meta.error)}
             >
 
-              <Input {...input} placeholder="Name" />
+              <Input {...input} placeholder="Flat Number" />
             </AForm.Item>
           )}
         </Field>
@@ -53,7 +51,7 @@ const RoomEditorForm = ({ initialValues, onSubmit, onDelete }) => (
               validateStatus={(!meta.dirtySinceLastSubmit && meta.submitError && meta.submitError.length) || (meta.error && meta.touched) ? 'error' : ''}
               help={(meta.submitError && meta.submitError.length && meta.submitError.join(',')) || (meta.error && meta.touched && meta.error)}
             >
-              <Input {...input} placeholder="Landmark" />
+              <Input {...input} placeholder="Bathrooms" />
             </AForm.Item>
           )}
         </Field>
@@ -64,7 +62,7 @@ const RoomEditorForm = ({ initialValues, onSubmit, onDelete }) => (
               validateStatus={(!meta.dirtySinceLastSubmit && meta.submitError && meta.submitError.length) || (meta.error && meta.touched) ? 'error' : ''}
               help={(meta.submitError && meta.submitError.length && meta.submitError.join(',')) || (meta.error && meta.touched && meta.error)}
             >
-              <Input {...input} placeholder="Landmark" />
+              <Input {...input} placeholder="Area" />
             </AForm.Item>
           )}
         </Field>
@@ -75,7 +73,7 @@ const RoomEditorForm = ({ initialValues, onSubmit, onDelete }) => (
               validateStatus={(!meta.dirtySinceLastSubmit && meta.submitError && meta.submitError.length) || (meta.error && meta.touched) ? 'error' : ''}
               help={(meta.submitError && meta.submitError.length && meta.submitError.join(',')) || (meta.error && meta.touched && meta.error)}
             >
-              <Input {...input} placeholder="Landmark" />
+              <Input {...input} placeholder="Rent" />
             </AForm.Item>
           )}
         </Field>
@@ -86,7 +84,7 @@ const RoomEditorForm = ({ initialValues, onSubmit, onDelete }) => (
               validateStatus={(!meta.dirtySinceLastSubmit && meta.submitError && meta.submitError.length) || (meta.error && meta.touched) ? 'error' : ''}
               help={(meta.submitError && meta.submitError.length && meta.submitError.join(',')) || (meta.error && meta.touched && meta.error)}
             >
-              <Input {...input} placeholder="Landmark" />
+              <Input {...input} placeholder="Maintenance Amount" />
             </AForm.Item>
           )}
         </Field>
@@ -97,7 +95,7 @@ const RoomEditorForm = ({ initialValues, onSubmit, onDelete }) => (
               validateStatus={(!meta.dirtySinceLastSubmit && meta.submitError && meta.submitError.length) || (meta.error && meta.touched) ? 'error' : ''}
               help={(meta.submitError && meta.submitError.length && meta.submitError.join(',')) || (meta.error && meta.touched && meta.error)}
             >
-              <Input {...input} placeholder="Landmark" />
+              <Input {...input} placeholder="Electricity Account Number" />
             </AForm.Item>
           )}
         </Field>

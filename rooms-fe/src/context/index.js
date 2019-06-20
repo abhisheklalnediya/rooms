@@ -89,7 +89,14 @@ class RoomProvider extends React.Component {
     }));
   }
 
-  updateBuildingState(data) {
+  updateBuildingState(b) {
+    const {
+      name, address, landmarks, id,
+    } = b;
+    const [landmark1, landmark2, landmark3] = landmarks;
+    const data = {
+      name, address, landmark1, landmark2, landmark3, id,
+    };
     this.setState(state => ({ buildings: _.sortBy([...state.buildings.map(x => (x.id === data.id ? data : x))], 'id') }));
   }
 
@@ -120,7 +127,7 @@ class RoomProvider extends React.Component {
   }
 
   addRoom(rd) {
-    this.setState(state => ({ rooms: [...state.rooms, { ...rd, selected: true }] }));
+    this.setState(state => ({ rooms: [...state.rooms, { ...rd }] }));
   }
 
   addUpdateRoom(bd) {

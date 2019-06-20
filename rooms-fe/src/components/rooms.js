@@ -25,11 +25,9 @@ class AddRoom extends React.Component {
   }
 
   onChange(e) {
-    console.log(e.target.name);
     const values = this.state;
     values[e.target.name] = e.target.value;
     this.setState(values);
-    console.log(this.state);
   }
 
   onSubmit(e) {
@@ -80,6 +78,7 @@ export default () => (
   <RoomConsumer>
     {data => (
       <div className="rooms">
+        <h3>Rooms</h3>
         <Rooms {...data} />
       </div>
 

@@ -24,11 +24,9 @@ class AddBuilding extends React.Component {
   }
 
   onChange(e) {
-    console.log(e.target.name);
     const values = this.state;
     values[e.target.name] = e.target.value;
     this.setState(values);
-    console.log(this.state);
   }
 
   onSubmit(e) {
@@ -56,6 +54,7 @@ export default () => (
     {data => (
       <React.Fragment>
         <div className="buildings">
+          <h3>Buildings</h3>
           <div className="buildings-group">
             {data.buildings.map(x => (
               <BuildingItem key={x.id} building={x} onSelect={data.selectBuilding} />))}

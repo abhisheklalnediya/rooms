@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const ROOT = 'http://localhost:8000';
+const ROOT = '';
 export function getBuildings() {
   return axios.get(`${ROOT}/buildings/`);
 }
@@ -24,7 +24,7 @@ export function updateBuilding({
     address,
     landmarks: [landmark1, landmark2, landmark3].filter(x => x),
   };
-  return axios.patch(`${ROOT}/buildings/${id}/`, data);
+  return axios.put(`${ROOT}/buildings/${id}/`, data);
 }
 export function deleteBuilding(id) {
   return axios.delete(`${ROOT}/buildings/${id}/`);
@@ -55,7 +55,7 @@ export function addRoom({
     electricity_account_number,
   };
   if (id) {
-    return axios.patch(`${ROOT}/buildings/${buildingId}/rooms/${id}/`, data);
+    return axios.put(`${ROOT}/buildings/${buildingId}/rooms/${id}/`, data);
   }
   return axios.post(`${ROOT}/buildings/${buildingId}/rooms/`, data);
 }

@@ -11,9 +11,13 @@
   background: #fff;
   border-bottom: 1px solid #ddd;
   padding: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 .buildingItem.selected {
-    background: #EEE
+  background: #1890ff;
+  color: #FFF;
+  border-bottom: none;
 }
 .bHeader {
   font-size: 20px;
@@ -23,7 +27,9 @@
   overflow: hidden;
 }
 .buildings-group {
-    overflow: auto
+    overflow: auto;
+    padding: 10px;
+    flex-grow: 1;
 }
 .addBuildingFrm, .addRoomFrm {
     display: flex;
@@ -40,14 +46,28 @@
 }
 .editor {
   flex-grow: 1;
-  padding: 20px;
   overflow: auto;
   position: relative;
+  background: #f7f7f7;
+}
+.editor form {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+@media screen and (min-width: 1350px) {
+  .editor {
+    display: flex;
+    /* justify-content: center */
+  }
+  .editor form {
+    max-width: 520px;
+  }
 }
 
 .faded {
     font-style: italic;
-    color: #999
+    /* color: #999 */
 }
 
 .empty {
@@ -56,4 +76,11 @@
   left: 10px;
   font-size: 20px;
   color: #AAA;
+}
+
+h3 {
+  padding: 10px 0px 0px 0px;
+  text-align: center;
+  margin: 0;
+  color: #888;
 }
