@@ -54,12 +54,12 @@ API Endpoints
 > Method: DELETE
 
 **List Rooms in a Building**
-> Endpoint: /buildings/<buidling_id>/rooms  
+> Endpoint: /buildings/<buidling_id>/rooms/  
 > Method: GET
 
 **Create Building**
 
-> Endpoint: /buildings/<buidling_id>/rooms  
+> Endpoint: /buildings/<buidling_id>/rooms/  
 > Method: POST
 
 **Get Room in a Building**
