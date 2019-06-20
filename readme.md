@@ -1,6 +1,6 @@
 Rooms
 =====
-An App to manage Building and rooms in it.
+An App to manage Buildings and rooms in it.
 
 Demo
 ---
