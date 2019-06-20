@@ -1,3 +1,4 @@
 .vscode/
 ve/
 *.pyc
+rooms-docker/pgdata/
